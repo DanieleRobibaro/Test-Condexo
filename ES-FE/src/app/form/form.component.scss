@@ -1,0 +1,49 @@
+.example-container mat-form-field + mat-form-field {
+  margin-left: 8px;
+}
+.example-radio-group {
+  display: flex;
+  flex-direction: column;
+  margin: 15px 0;
+  align-items: flex-start;
+}
+.example-radio-button {
+  margin: 5px;
+}
+.gradient-custom-2 {
+  background: #a1c4fd;
+  background: -webkit-linear-gradient(to right, #e5e0ff, #fff2f2);
+  background: linear-gradient(to right, #e5e0ff, #fff2f2);
+}
+.bg-second {
+  background-color: #8ea7e9;
+}
+.bg-indigo {
+  background-color: #7286d3;
+}
+.btn-light {
+  color: #8ea7e9;
+}
+@media (min-width: 992px) {
+  .card-registration-2 .bg-second {
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+  }
+  .card-registration-2 .bg-indigo {
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+  }
+  #l {
+    margin-left: 3%;
+  }
+}
+@media (max-width: 991px) {
+  .card-registration-2 .bg-second {
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+  }
+  .card-registration-2 .bg-indigo {
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+  }
+}

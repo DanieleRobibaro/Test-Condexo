@@ -1,0 +1,224 @@
+<section class="gradient-custom-2">
+  <div class="container py-5 h-100">
+    <div class="row d-flex justify-content-center align-items-center h-100">
+      <div class="col-12">
+        <div
+          class="card card-registration card-registration-2"
+          style="border-radius: 15px"
+        >
+          <div class="card-body p-0">
+            <div class="row g-0">
+              <div class="col-lg-6 bg-second text-white">
+                <div class="p-5">
+                  <h1 class="fw-normal mb-5" style="color: white">
+                    General Infomation
+                  </h1>
+
+                  <div class="row">
+                    <div class="col-md-6 mb-4 pb-2 pr-5">
+                      <div class="form-outline">
+                        <mat-form-field appearance="outline">
+                          <mat-label>Enter your Name</mat-label>
+                          <input matInput [formControl]="name" required />
+                          <mat-error *ngIf="name.invalid">{{
+                            getErrorMessage()
+                          }}</mat-error>
+                        </mat-form-field>
+                      </div>
+                    </div>
+                    <div class="col-md-6 mb-4 pb-2">
+                      <div class="form-outline" id="l">
+                        <mat-form-field appearance="outline">
+                          <mat-label>Enter your Last name</mat-label>
+                          <input matInput [formControl]="Lastname" required />
+                          <mat-error *ngIf="Lastname.invalid">{{
+                            getErrorMessage()
+                          }}</mat-error>
+                        </mat-form-field>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-6 mb-4 pb-2 mb-md-0 pb-md-0">
+                      <div class="form-outline">
+                        <label id="example-radio-group-label">Gender : </label>
+                        <mat-radio-group
+                          aria-labelledby="example-radio-group-label"
+                          class="example-radio-group"
+                          [(ngModel)]="favoriteSeason"
+                        >
+                          <mat-radio-button
+                            class="example-radio-button"
+                            *ngFor="let season of seasons"
+                            [value]="season"
+                          >
+                            {{ season }}
+                          </mat-radio-button>
+                        </mat-radio-group>
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                      <mat-form-field appearance="outline">
+                        <mat-label>Choose a date</mat-label>
+                        <input matInput [matDatepicker]="picker" />
+                        <mat-hint>MM/DD/YYYY</mat-hint>
+                        <mat-datepicker-toggle
+                          matIconSuffix
+                          [for]="picker"
+                        ></mat-datepicker-toggle>
+                        <mat-datepicker #picker></mat-datepicker>
+                      </mat-form-field>
+                    </div>
+                    <div class="mt-3 mb-4">
+                      <div class="form-outline form-white">
+                        <div class="example-container">
+                          <mat-form-field appearance="outline">
+                            <mat-label>Enter your email</mat-label>
+                            <input
+                              matInput
+                              placeholder="pat@example.com"
+                              [formControl]="email"
+                              required
+                            />
+                            <mat-error *ngIf="email.invalid">{{
+                              getErrorMessage()
+                            }}</mat-error>
+                          </mat-form-field>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="mb-4">
+                      <div class="form-outline form-white">
+                        <div class="example-container">
+                          <mat-form-field appearance="outline">
+                            <mat-label>Password</mat-label>
+                            <input
+                              matInput
+                              placeholder="min 4 characters"
+                              [formControl]="password"
+                              required
+                            />
+                            <mat-error *ngIf="password.invalid">{{
+                              getErrorMessage()
+                            }}</mat-error>
+                          </mat-form-field>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-6 bg-indigo text-white">
+                <div class="p-5">
+                  <h1 class="fw-normal mb-5">Contact Details</h1>
+
+                  <div class="mb-4 pb-2">
+                    <div class="form-outline form-white">
+                      <mat-form-field appearance="outline">
+                        <mat-label>Street</mat-label>
+                        <input matInput />
+                      </mat-form-field>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-6 mb-4 pb-2">
+                      <div class="form-outline form-white">
+                        <mat-form-field appearance="outline">
+                          <mat-label>Zip Code</mat-label>
+                          <input matInput [formControl]="zipcode" />
+                          <mat-error *ngIf="zipcode.invalid">{{
+                            getErrorMessage()
+                          }}</mat-error>
+                        </mat-form-field>
+                      </div>
+                    </div>
+                    <div class="col-md-6 mb-4 pb-2">
+                      <div class="form-outline form-white" id="l">
+                        <mat-form-field appearance="outline">
+                          <mat-label>Place</mat-label>
+                          <input matInput />
+                        </mat-form-field>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="mb-4 pb-2">
+                    <div class="form-outline form-white">
+                      <mat-form-field appearance="outline">
+                        <mat-label>Country</mat-label>
+                        <input matInput />
+                      </mat-form-field>
+                    </div>
+                  </div>
+
+                  <div class="row">
+                    <div class="col-md-6 mb-4 pb-2">
+                      <div class="form-outline form-white">
+                        <mat-form-field appearance="outline">
+                          <mat-label>Code +</mat-label>
+                          <input
+                            matInput
+                            placeholder="+39"
+                            [formControl]="code"
+                          />
+                          <mat-error *ngIf="code.invalid">{{
+                            getErrorMessage()
+                          }}</mat-error>
+                        </mat-form-field>
+                      </div>
+                    </div>
+                    <div class="col-md-6 mb-4 pb-2">
+                      <div class="form-outline form-white" id="l">
+                        <mat-form-field appearance="outline">
+                          <mat-label>Phone Number</mat-label>
+                          <input
+                            matInput
+                            placeholder="1234567890"
+                            [formControl]="number"
+                          />
+                          <mat-error *ngIf="number.invalid">{{
+                            getErrorMessage()
+                          }}</mat-error>
+                        </mat-form-field>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div
+                    class="form-check d-flex justify-content-start mb-4 pb-3"
+                  >
+                    <mat-checkbox class="example-margin"></mat-checkbox>
+                    <label
+                      class="form-check-label text-white"
+                      style="margin-left: 2%"
+                      for="form2Example3"
+                    >
+                      I do accept the
+                      <a href="#!" class="text-white"
+                        ><u>Terms and Conditions</u></a
+                      >
+                      of your site.
+                    </label>
+                  </div>
+
+                  <button
+                    [disabled]="
+                      password.invalid ||
+                      email.invalid ||
+                      name.invalid ||
+                      Lastname.invalid
+                    "
+                    (click)="register()"
+                    class="btn btn-light send-button tx-tfm rounded-pill"
+                  >
+                    Register
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
